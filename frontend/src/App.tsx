@@ -18,8 +18,8 @@ function App() {
         <Routes>
           <Route Component={PageLayout}>
             <Route path="/" Component={HomePage} />
+            <Route path="/country-detail/:code" element={<CountryDetail />} />
             <Route path="*" Component={() => <Navigate to="/" />} />
-            <Route path="/country-detail" Component={CountryDetail} />
           </Route>
         </Routes>
       </BrowserRouter>

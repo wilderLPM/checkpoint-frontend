@@ -1,0 +1,8 @@
+#country-list > ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    text-align: center;
+    margin: 25px;
+}
