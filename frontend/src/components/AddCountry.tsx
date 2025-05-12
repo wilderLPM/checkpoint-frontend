@@ -2,6 +2,7 @@ import { useMutation } from "@apollo/client";
 import { useState } from "react";
 import { mutationAddCountry } from "../api/mutationAddCountry";
 import "./AddCountry.css"
+import { queryCountries } from "../api/queryCountries";
 
 export default function AddCountry() {
     const [name, setName] = useState("");
@@ -9,7 +10,9 @@ export default function AddCountry() {
     const [code, setCode] = useState("");
 
     const [error, setError] = useState<Record<string, string[]>>({});
-    const [addCountry] = useMutation(mutationAddCountry);
+    const [addCountry] = useMutation(mutationAddCountry, {
+        refetchQueries: [{ query: queryCountries }]
+    });
 
     const validateName = (name: string): string[] => {
         const errors: string[] = [];
