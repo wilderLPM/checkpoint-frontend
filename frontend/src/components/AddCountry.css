@@ -1,0 +1,30 @@
+#countryForm{
+    background-color: rgb(237, 231, 231);
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+    padding: 15px 20px;
+}
+
+#countryForm > div{
+    display: flex;
+    flex-direction: column;
+}
+
+#countryForm > div > input{
+    margin: 5px 0;
+    height: 35px;
+}
+
+#countryForm > button{
+    width: 60px;
+    height: 60px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}

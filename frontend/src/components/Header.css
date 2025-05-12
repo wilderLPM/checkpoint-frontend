@@ -1,0 +1,15 @@
+.header{
+    background-color: var(--bg-color);
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.header > * {
+    margin-bottom: 20px;
+    /* voir pourquoi ça n'affecte pas le <a> */
+}
+
+h1{
+    font-size: 24px;
+}
