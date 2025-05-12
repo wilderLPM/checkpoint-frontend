@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { queryCountry } from "../api/queryCountry";
 import { useParams } from "react-router-dom";
+import "./CountryDetail.css";
 
 export function CountryDetail() {
     const { code } = useParams<{ code: string }>();
@@ -14,9 +15,9 @@ export function CountryDetail() {
     const c = data.country;
 
     return (
-        <div>
-            <h2>{c.name} {c.emoji}</h2>
-            <p>Code : {c.code}</p>
+        <div className="country-detail">
+            <p>{c.emoji}</p>
+            <p>Name : {c.name} ({c.code})</p>
             <p>Continent : {c.continent.name}</p>
         </div>
     );
