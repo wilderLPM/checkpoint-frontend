@@ -18,7 +18,7 @@ export function CountryDetail() {
         <div className="country-detail">
             <p>{c.emoji}</p>
             <p>Name : {c.name} ({c.code})</p>
-            <p>Continent : {c.continent.name}</p>
+            <p>Continent : {c.continent?.name}</p>
         </div>
     );
 }
